@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- ===================== HOME SCREEN ===================== -->
+    <section id="home-screen" class="screen active-screen">
+      <div class="card home-card">
+        <h1 class="app-title">Quiz</h1>
+        <p class="app-description">
+          Test your knowledge with this 10-question quiz. You will have
+          <strong>10 minutes</strong> to complete it. Select the best answer
+          for each question and click "Next" to continue. Good luck!
+        </p>
+        <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+      </div>
+    </section>
+
+    <!-- ===================== QUIZ SCREEN ===================== -->
+    <section id="quiz-screen" class="screen">
+      <div class="card quiz-card">
+
+        <!-- Top bar: question counter + timer -->
+        <div class="quiz-topbar">
+          <span id="question-counter" class="question-counter">Question 1 of 10</span>
+          <span id="timer" class="timer">10:00</span>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-bar-track">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+
+        <!-- Question text -->
+        <h2 id="question-text" class="question-text"></h2>
+
+        <!-- Options list, filled dynamically by JavaScript -->
+        <div id="options-container" class="options-container"></div>
+
+        <!-- Warning shown if user tries to skip without answering -->
+        <p id="warning-message" class="warning-message"></p>
+
+        <div class="quiz-actions">
+          <button id="next-btn" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESULT SCREEN ===================== -->
+    <section id="result-screen" class="screen">
+      <div class="card result-card">
+        <h1 class="result-title">Quiz Completed!</h1>
+
+        <div class="score-summary">
+          <div class="score-circle">
+            <span id="score-percentage">0%</span>
+          </div>
+
+          <div class="score-details">
+            <p><strong>Total Score:</strong> <span id="score-total">0 / 10</span></p>
+            <p><strong>Correct Answers:</strong> <span id="correct-count">0</span></p>
+            <p><strong>Incorrect Answers:</strong> <span id="incorrect-count">0</span></p>
+            <p id="result-message" class="result-message"></p>
+          </div>
+        </div>
+
+        <button id="restart-btn" class="btn btn-primary">Restart Quiz</button>
+
+        <h2 class="review-title">Answer Review</h2>
+        <div id="review-container" class="review-container"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
