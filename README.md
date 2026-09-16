@@ -31,3 +31,6 @@ Quiz Application/
 ├── index.html
 ├── style.css
 ├── script.js
+## Author
+
+**Syed Mustufa**
